@@ -114,7 +114,9 @@ angular.module('ivh.treeview').directive('ivhTreeview', ['ivhTreeviewMgr', funct
           localOpts.nodeTpl = transcludedNodeTpl;
         }
       });
-
+      
+      ivhTreeviewMgr.updateOptions(locaOpts);
+      
       /**
        * Get the merged global and local options
        *
