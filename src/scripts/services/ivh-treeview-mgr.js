@@ -87,6 +87,17 @@ angular.module('ivh.treeview')
     var isId = function(val) {
       return ng.isString(val) || ng.isNumber(val);
     };
+    
+    /**
+     * Update default options
+     *
+     * This method will merge the global options with the passed ones for ivhTreeviewMgr.
+     *
+     * @param {Object} opts Options to override default options with
+     */
+    exports.updateOptions = function(opts) {
+      angular.extend(options, opts);
+    };
 
     /**
      * Select (or deselect) a tree node
